@@ -2,6 +2,7 @@
 This small Python program analize the html code of a web, and locates the url of an embedded video.
 
 The program will require an URL; and it will answer with the URL embedded on them.
+The text that appears to request the URL is in spanish. (i'm spanish).  if you don't understand it, just insert the URL after the first message
 
 We have worked with this page as an example:
 https://www.herokidstudio.es/
