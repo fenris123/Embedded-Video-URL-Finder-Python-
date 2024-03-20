@@ -1,0 +1,24 @@
+@author: Guillermo Ferrer.
+"""
+
+# THIS PART WILL IMPORT ALL THE NEEDED LIBRARIES (install those who you don't have)
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+
+#  THIS PART WILL GIVES US THE PAGE IN A SOUP OBJECT.
+
+url = input ("Inserte la direccion de la pagina web:")
+html = urlopen (url)   
+sopa = BeautifulSoup(html, "html.parser")
+
+#THIS PART WILL LOOK FOR LINES OF CODE WHO HAS VIDEOS; AND GIVES US THE INSERTED URL 
+
+videos = sopa("video")
+for video in videos:
+   linea= video.get("data-src", "")
+   if "mp4" or ".avi" in linea:
+       print (linea)
+     
+        
